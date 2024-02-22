@@ -1,0 +1,21 @@
+{% extends "base.njk" %}
+
+{% block titulo %}Habitaciones | Nueva{% endblock %}
+
+{% block contenido %}
+
+
+<h2>Dar de Alta Nueva Limpieza en Habitación</h2>
+<form action="/limpiezas/{{ habitacion.id }}" method="POST">
+    <label for="fecha">Fecha de la limpieza:</label><br>
+    <input type="date" id="fecha" name="fecha" value="{{fecha | date("YYYY-MM-DD")}}">
+    <br>
+
+    <label for="observaciones">Observaciones (opcional):</label><br>
+    <textarea id="observaciones" name="observaciones" rows="4" cols="50"></textarea>
+    <br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

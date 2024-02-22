@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+
+{% block titulo %}Limpiezas | Listado{% endblock %}
+
+{% block contenido %}
+    <h1>Listado de Limpiezas de la Habitacion {{habitacion.numero}}</h1>
+
+    <div class="card-deck">
+        {% for limpieza in limpiezas %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Limpieza de la habitación</h5>
+                    <p class="card-text">
+                        <strong>ID Habitación:</strong> {{ limpieza.idHabitacion }}<br>
+                        <strong>ID Limpieza:</strong> {{ limpieza.id }}<br>
+                        <strong>Observaciones:</strong> {{ limpieza.observaciones }}<br>
+                        <strong>Fecha y Hora:</strong> {{ limpieza.fechaHora | date("DD/MM/YYYY HH:mm:ss") }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="/limpiezas/nueva/{{ habitacion.id }}" class="btn btn-success">Añadir Limpieza</a>
+
+{% endblock %}

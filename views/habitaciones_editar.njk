@@ -1,0 +1,71 @@
+{% extends "base.njk" %}
+{% block titulo %}Habitacion | Editar{% endblock %}
+
+{% block contenido %}
+    <h1>Edición de una habitacion</h1>
+    {% if (habitacion) %}
+        {% if errores.general %}
+            <p class="alert alert-danger">{{ errores.general }}</p>
+        {% endif %}
+        <form action="/habitaciones/{{ habitacion.id }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="numero_habitacion">Número de Habitación:</label>
+                <input type="number" class="form-control" id="numero" name="numero" value="{{habitacion.numero}}"></div>
+                {% if error and error.numero %}
+                <div class="alert alert-danger">
+                    {{ error.numero|safe }}
+                </div>
+                {% endif %}
+            <div class="form-group">
+                    <label for="tipo_habitacion">Tipo de Habitación:</label>
+                    <select class="form-control" id="tipo" name="tipo" >
+                        <option value="individual">Individual</option>
+                        <option value="doble">Doble</option>
+                        <option value="familiar">Familiar</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                {% if error and error.tipo %}
+                <div class="alert alert-danger">
+                {# <div style="color: red;"> #}
+                    {{ error.tipo|safe }}
+                </div>
+                {% endif %}
+            </div>
+                <div class="form-group">
+                    <label for="precio_noche">Precio por Noche:</label>
+                    <input type="number" class="form-control" id="precio_noche" name="precio" value="{{habitacion.precio}}">
+                    {% if error and error.precio %}
+                        <div class="alert alert-danger">
+                        {# <div style="color: red;"> #}
+                        {{ error.precio|safe }}
+                        </div>
+                    {% endif %}
+                </div>
+                    
+                    <div class="form-group">
+                        <label for="descripcion_habitacion">Descripción de la Habitación:</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="4" >{{habitacion.descripcion}}</textarea>
+                    {% if error and error.descripcion %}
+                    <div class="alert alert-danger">
+                    {# <div style="color: red;"> #}
+                    {{ error.descripcion|safe }}
+                    </div>
+                    {% endif %}
+
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen_habitacion">Imagen de la Habitación:</label>
+                        <img src="/public/uploads/habitaciones/{{ habitacion.imagen }}" class="img-fluid mb-3" alt="Imagen de la habitación">
+                        <input type="file" class="form-control-file" id="imagen" name="imagen">
+                        {% if error and error.imagen %}
+                            <div class="alert alert-danger">
+                            {{ error.imagen|safe }}
+                            </div>
+                        {% endif %}
+                    </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                {% else %}
+                    <p class="alert alert-danger">No se ha encontrado la habitacion</p>
+                {% endif %}
+            {% endblock %}
