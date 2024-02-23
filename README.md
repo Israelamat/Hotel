@@ -19,7 +19,7 @@ Este proyecto es una aplicación web desarrollada con JavaScript, Node.js, Expre
 
 ## Configuración y Despliegue
 
-1. Clona el repositorio: `https://github.com/Israelamat/Pr-ctica-Unitat-1.git`
+1. Clona el repositorio: `https://github.com/Israelamat/Hotel.git`
 2. Instala las dependencias: `npm install` (en este caso node_modules ya esta en el repositorio por lo que este paso podria ser omitido)
 3. Configura las variables de entorno, incluyendo la conexión a la base de datos y la URL del servidor.
 4. Ejecuta la aplicación: `node index.js`, en el caso de que nodemon este instalado en tu en tu equipo: `nodemon --ext js,njk index.js `
