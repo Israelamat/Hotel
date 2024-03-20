@@ -26,7 +26,7 @@ Este proyecto es una aplicación web desarrollada con JavaScript, Node.js, Expre
 
 ## Acceso a la Aplicación
 
-- Accede a la aplicación a través de tu navegador web: `http://isra712.store.com` `http://isra712.store/habitaciones` (Actualmente en este dominio estara alojado otar proyecto) 
+- Accede a la aplicación a través de tu navegador web: http://hotel.isra712.store/habitaciones 
 
 ## Contribución
 
