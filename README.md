@@ -1,40 +1,53 @@
-# Sistema de Gestión de Habitaciones e Incidencias para Hoteles
+# 🏨 Sistema de Gestión de Habitaciones e Incidencias para Hoteles
 
-## Descripción
-Este proyecto es una aplicación web desarrollada con JavaScript, Node.js, Express y MongoDB que proporciona una solución integral para la gestión de habitaciones e incidencias en hoteles. Facilita el control de la disponibilidad de habitaciones, el seguimiento de incidencias y la administración eficiente de los recursos.
+## 📋 Descripción
 
-## Características
+**Sistema de Gestión de Habitaciones e Incidencias** es una aplicación web desarrollada con **JavaScript, Node.js, Express y MongoDB**, diseñada para ofrecer una solución integral a la administración de hoteles.  
+Permite gestionar habitaciones, registrar incidencias y optimizar la organización interna del personal del hotel.
 
-- **Gestión de Habitaciones:** Administra la disponibilidad y detalles de las habitaciones del hotel.
-- **Registro de Incidencias:** Permite a los usuarios registrar y hacer un seguimiento de las incidencias relacionadas con las habitaciones o servicios.
-- **Imágenes del Hotel:** Visualiza imágenes del hotel para proporcionar una vista previa a los usuarios.
-- **Despliegue en VPS:** Desplegado en un servidor VPS de OVHCloud para garantizar accesibilidad y rendimiento.
-- **Dominio Personalizado:** Accede a la aplicación mediante un dominio personalizado comprado a través de OVHCloud.
+---
 
-## Requisitos del Sistema
+## 🚀 Características Principales
 
-- Node.js y npm instalados.
-- MongoDB instalado y configurado.
-- Servidor VPS configurado y en funcionamiento.
+- 🛏️ **Gestión de Habitaciones:** Controla la disponibilidad, detalles y estado de cada habitación del hotel.  
+- 🧾 **Registro de Incidencias:** Permite registrar, actualizar y seguir incidencias relacionadas con las habitaciones o servicios.  
+- 🖼️ **Visualización de Imágenes:** Muestra imágenes del hotel para brindar una vista previa atractiva a los usuarios.  
+- ☁️ **Despliegue en VPS:** Implementado en un servidor **OVHCloud VPS**, garantizando accesibilidad y rendimiento.  
+- 🌐 **Dominio Personalizado:** Accesible mediante **hotel.isra712.store**, un dominio propio gestionado a través de OVHCloud.  
 
-## Configuración y Despliegue
+---
 
-1. Clona el repositorio: `https://github.com/Israelamat/Hotel.git`
-2. Instala las dependencias: `npm install` (en este caso node_modules ya esta en el repositorio por lo que este paso podria ser omitido)
-3. Configura las variables de entorno, incluyendo la conexión a la base de datos y la URL del servidor.
-4. Ejecuta la aplicación: `node index.js`, en el caso de que nodemon este instalado en tu en tu equipo: `nodemon --ext js,njk index.js `
+## 🧰 Tecnologías Utilizadas
 
-## Acceso a la Aplicación
+| Tecnología | Descripción |
+|-------------|-------------|
+| **Node.js** | Entorno de ejecución para JavaScript del lado del servidor |
+| **Express.js** | Framework para gestionar rutas y peticiones HTTP |
+| **MongoDB** | Base de datos NoSQL para almacenar habitaciones e incidencias |
+| **Nunjucks** | Motor de plantillas para renderizar las vistas |
+| **VPS OVHCloud** | Entorno de despliegue del proyecto |
+| **HTML / CSS / JS** | Estructura, diseño y comportamiento del front-end |
 
-- Accede a la aplicación a través de tu navegador web: http://hotel.isra712.store/habitaciones 
+---
 
-## Contribución
+## ⚙️ Requisitos del Sistema
 
-Si deseas contribuir al desarrollo de esta aplicación, sigue las pautas habituales para hacer pull requests.
+- Tener instalado **Node.js** y **npm**.  
+- Tener **MongoDB** instalado y configurado.  
+- Contar con un **servidor VPS** activo para el despliegue (opcional para desarrollo local).
 
-## Notas de Desarrollo
+---
 
-Este proyecto está en constante desarrollo, y se esperan mejoras continuas y nuevas características. Agradecemos tu participación y esperamos que la aplicación sea útil para la gestión eficiente de hoteles.
+## 🧩 Instalación y Configuración
+
+```bash
+# 1️⃣ Clona el repositorio
+git clone https://github.com/Israelamat/Hotel.git
+cd Hotel
+
+# 2️⃣ Instala las dependencias (si fuera necesario)
+npm install
+
 
 ## Capturas de Pantalla
 [![Habitaciones.jpg](https://i.postimg.cc/vZp3Kpcw/Habitaciones.jpg)](https://postimg.cc/bZ9xDVxm)
